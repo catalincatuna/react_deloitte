@@ -32,32 +32,35 @@ function Book(book: BookType) {
 
     const [showDescription, setShowDescription] = React.useState(false);
 
-    return <div className="book-card">
-        <div className="book-row">
-            <span className="book-title">
-                Title
-            </span>
-            <span className="book-value">{book.title}</span>
-        </div>
-        <div>
+    return <div className="book-content">
+        <div className="book-card">
+            <div className="book-row">
+                <span className="book-title">
+                    Title
+                </span>
+                <span className="book-value">{book.title}</span>
+            </div>
+            <div>
 
-        <div className="book-row">
-            <span className="book-label">
-                Description
-            </span>
-            <span className="book-value">{showDescription ? book.description : 'Click to show description'}</span>
-            <button className="book-button" onClick= {() => setShowDescription(!showDescription)}>
-                {showDescription ? 'Hide' : 'Show'}
-            </button>
-        </div>
-        </div>
+                <div className="book-row">
+                    <span className="book-label">
+                        Description
+                    </span>
+                    <span className="book-value">{showDescription ? book.description : 'Click to show full description'}</span>
 
-        <div className="book-row">
-            <span className="book-label">
-                Image
-            </span>
-            <span className="book-value">{book.imageurl != '' ? <img src={book.imageurl} alt="book image" /> : 'No image available'}</span>
+                </div>
+            </div>
+
+            <div className="book-row">
+                <span className="book-label">
+                    Image
+                </span>
+                <span className="book-value">{book.imageurl != '' ? <img src={book.imageurl} alt="book image" /> : 'No image available'}</span>
+            </div>
         </div>
+        <button className="book-button" onClick={() => setShowDescription(!showDescription)}>
+            {showDescription ? 'Hide description' : 'Show description'}
+        </button>
     </div>
 
 }
