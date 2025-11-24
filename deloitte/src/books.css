@@ -1,0 +1,90 @@
+.books-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.book-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.book-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+  max-width: 400px;
+}
+
+.book-label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 16px;
+  min-width: 100px;
+}
+
+.book-title {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  min-width: 100px;
+}
+
+.book-value {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.book-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  max-height: 60px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.book-button:hover {
+  background-color: #0056b3;
+}
+
+.book-button:active {
+  background-color: #004494;
+}
+
+.add-book-button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.add-book-button:hover {
+  background-color: #218838;
+}
+
+.add-book-button:active {
+  background-color: #1e7e34;
+}
+
