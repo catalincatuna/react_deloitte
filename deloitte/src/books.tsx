@@ -40,15 +40,17 @@ function Book(book: BookType) {
                 </span>
                 <span className="book-value">{book.title}</span>
             </div>
-            <div>
 
-                <div className="book-row">
+            <div className="book-row">
                     <span className="book-label">
                         Description
                     </span>
-                    <span className="book-value">{showDescription ? book.description : 'Click to show full description'}</span>
-
+                <div className="book-value">
+                    <div className={`description-content ${showDescription ? 'expanded' : 'collapsed'}`}>
+                        {showDescription ? book.description : 'Click to show full description'}
+                    </div>
                 </div>
+
             </div>
 
             <div className="book-row">
